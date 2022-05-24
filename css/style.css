@@ -1,103 +1,279 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-*{
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
-.navbar{
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
 }
 
-a{
+a {
   text-decoration: none;
   display: inline-block;
 }
 
-button, button:focus,
-input, input:focus{
+button,
+button:focus,
+input,
+input:focus {
   outline: none;
   border: none;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.navbar .left-nav{
+.container {
+  max-width: 85%;
+  margin: 0 auto;
+}
+
+/* Start Style Page */
+
+.navbar .left-nav {
   display: flex;
   align-items: center;
 }
-.left-nav .logo img{
-  max-width: 120px;
+.left-nav .logo img {
+  max-width: 155px;
 }
-.left-nav .btn{
-  background-color: #E3EEF7;
-  color: #1472CC;
-  padding: .7rem 1rem;
-  border-radius: .6rem;
-  font-size: 1.2rem;
+.left-nav .btn {
+  background-color: #e3eef7;
+  color: #1472cc;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  font-size: 1.1rem;
   font-weight: 500;
-  margin-left: .5rem;
+  margin-left: 1rem;
 }
 
-.middle-nav ul{
+.middle-nav ul {
   list-style-type: none;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.middle-nav li a{
-  padding: .3rem 1rem;
-  color: #9FA0A3;
+.middle-nav li a {
+  padding: 0.3rem 1rem;
+  color: #9fa0a3;
   font-size: 1.1rem;
   font-weight: 500;
-  transition: .5s;
+  transition: 0.5s;
 }
-.middle-nav li a:hover{
-  color: #1573CC;
+.middle-nav li a:hover {
+  color: #1573cc;
 }
 
 .right-nav {
   display: flex;
   align-items: center;
 }
-.right-nav .search-box{
+.right-nav .search-box {
   position: relative;
 }
-.right-nav .search-box input{
+.right-nav .search-box input {
   width: 100%;
-  padding: .6rem 1rem;
+  padding: 0.6rem 1rem;
   border: none;
-  border-radius: .4rem;
+  border-radius: 0.4rem;
   font-size: 1.2rem;
   font-weight: 400;
-  border: 1px solid #9FA0A3;
-  transition: .5s;
+  border: 1px solid #9fa0a3;
+  transition: 0.5s;
 }
-.right-nav .search-box input::placeholder{
-  color: #C5C7CB;
+.right-nav .search-box input::placeholder {
+  color: #c5c7cb;
 }
-.right-nav .search-box .search-btn{
+.right-nav .search-box .search-btn {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 0;
   color: #747579;
   background-color: transparent;
-  padding: .7rem 1rem;
-  border-radius: .6rem;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
   font-size: 1.2rem;
   font-weight: 500;
 }
-.right-nav .user-box img{
+.right-nav .user-box img {
   width: 50px;
   height: 50px;
   object-fit: cover;
   border-radius: 50%;
   margin-left: 2rem;
+}
+
+/* Style Header Section */
+.header-sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 3rem;
+}
+
+.header-sec .header-content,
+.header-sec .header-image {
+  flex-basis: 50%;
+  width: 50%;
+}
+
+.header-content{
+  display: flex;
+  align-items: center;
+}
+
+.header-content .page-title {
+  font-size: 4rem;
+  color: #24292d;
+  margin-bottom: 1.5rem;
+}
+
+.page-title .yellow {
+  position: relative;
+  z-index: 10;
+}
+
+.page-title .yellow span {
+  position: absolute;
+  top: 0.5rem;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  transition: 0.5s;
+  z-index: -1;
+}
+.yellow span .fill-warning {
+  fill: #f7c32e;
+}
+
+.header-content .page-desc {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #747579;
+  margin: 1.5rem 0;
+}
+
+.header-content .features-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+  margin-bottom: 1.7rem;
+}
+.features-list li {
+  margin-right: 0.8rem;
+  color: rgb(116, 117, 121);
+}
+
+.features-list li i {
+  color: rgb(36, 41, 45);
+}
+
+.header-content .start-btn {
+  color: #d6293e;
+  background-color: rgba(214, 41, 62, 0.1);
+  padding: 0.9rem 1.5rem;
+  font-size: 1.2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+}
+.header-content .watch-btn {
+  background-color: transparent;
+  margin-left: 1.5rem;
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: center;
+  color: #24292d;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.header-content .watch-btn i {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  padding: 0;
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  -webkit-box-shadow: 0 0 0 8px rgb(6 106 201 / 40%);
+  box-shadow: 0 0 0 8px rgb(6 106 201 / 40%);
+  background-color: #066ac9;
+  margin-right: 1rem;
+}
+
+.header-image{
+  position: relative;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.header-image .banner-user{
+  position: absolute;
+  left: 50%;
+  top: 43.7%;
+  transform: translate(-50%, -50%);
+}
+
+.header-image .congratulation-div{
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  margin-bottom: 3rem;
+  margin-left: 3.7rem;
+  -webkit-box-shadow: 0px 0px 40px rgb(29 58 83 / 15%);
+  box-shadow: 0px 0px 40px rgb(29 58 83 / 15%);
+  padding: 1.2rem;
+  border-radius: 1rem;
+  border: 1px solid #FFF;
+  backdrop-filter: blur(5px);
+}
+
+.congratulation-div .content{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-align: left;
+}
+
+.congratulation-div .icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffc107;
+  width: 60px;
+  height: 60px;
+  color: #FFF;
+  font-size: 1.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.congratulation-div .msg-title{
+  font-size: 1rem;
+  color: #FFF;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+.msg-title i{
+  color: rgb(12, 188, 135);
+}
+.msg-desc{
+  color: rgb(240, 240, 240);
 }
