@@ -277,3 +277,60 @@ button {
 .msg-desc{
   color: rgb(240, 240, 240);
 }
+
+
+/* Start Style Statistics Section */
+.statistics-sec{
+  padding: 4rem 0;
+}
+.boxes{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.boxes .single-box{
+  width: 24%;
+  padding: 1.7rem;
+  background-color: #066ac9;
+  border-radius: .5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.boxes .single-box:not(:last-child){
+  margin-right: 1%;
+}
+.boxes .single-box:nth-child(1){
+  background-color: #FEF6E0;
+  color: #F7C32E;
+}
+.boxes .single-box:nth-child(2){
+  background-color: #E8EBED;
+  color: #1D3B53;
+}
+.boxes .single-box:nth-child(3){
+  background-color: #F0ECF9;
+  color: #6F42C1;
+}
+.boxes .single-box:nth-child(4){
+  background-color: #E7F6F8;
+  color: #17A2B8;
+}
+.single-box .icon{
+  font-size: 4rem;
+  margin-right: 1.5rem;
+}
+
+.single-box .box-content{
+  color: rgb(36, 41, 45);
+}
+
+.box-content .title{
+  font-size: 1.2rem;
+  font-size: 500;
+}
+.box-content .desc{
+  font-size: 1rem;
+  font-size: 500;
+}
